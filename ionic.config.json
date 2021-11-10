@@ -1,0 +1,8 @@
+{
+  "name": "Know Your Burgh",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "24a81030"
+}

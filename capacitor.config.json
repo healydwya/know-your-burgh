@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Know Your Burgh",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
