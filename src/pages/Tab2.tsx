@@ -1,22 +1,39 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import './Tab2.scss';
+import logo from '../assets/logo.png';
+import augustwilson1 from '../assets/augustwilson1.png';
 
 const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <img className="logo" alt="know your burgh logo with pittsburgh bridge" src={logo}></img>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <IonTitle>Learn</IonTitle>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Learn</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <div className="cards">
+          <IonCard>
+            <img className="card-img" alt="cover for history card" src={augustwilson1}></img>
+            <IonCardHeader>
+              <IonCardSubtitle>Local History</IonCardSubtitle>
+              <IonCardTitle>August Wilson's Childhood Home </IonCardTitle>
+            </IonCardHeader>
+          </IonCard>
+          <IonCard>
+            <img className="card-img" alt="cover for history card" src={augustwilson1}></img>
+            <IonCardHeader>
+              <IonCardSubtitle>Local History</IonCardSubtitle>
+              <IonCardTitle>August Wilson's Childhood Home </IonCardTitle>
+            </IonCardHeader>
+          </IonCard>
+        </div>
       </IonContent>
     </IonPage>
   );

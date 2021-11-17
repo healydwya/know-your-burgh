@@ -1,22 +1,24 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import './Tab1.scss';
+import logo from '../assets/logo.png';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <img className="logo" alt="know your burgh logo with pittsburgh bridge" src={logo}></img>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <IonTitle>Map</IonTitle>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Map</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <ExploreContainer name="Map page" />
       </IonContent>
     </IonPage>
   );
