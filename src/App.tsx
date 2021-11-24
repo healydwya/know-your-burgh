@@ -33,6 +33,11 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { initializeApp } from 'firebase/app';
+import firebaseConfig from './firebase.config';
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>

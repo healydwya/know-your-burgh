@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
-import pitt from '../assets/pittsky.jpeg';
+import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
+import pitt from '../assets/pittincline.jpeg';
 import './Tab3.scss';
 import logo from '../assets/logo.png';
 
@@ -12,11 +12,7 @@ const Tab3: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonTitle>About</IonTitle>
         <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">About</IonTitle>
-          </IonToolbar>
         </IonHeader>
         <div className="about-page">
           <img src={pitt} alt="pittsburgh skyline with bridge"></img>
