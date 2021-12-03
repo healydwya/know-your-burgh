@@ -5,6 +5,10 @@ import aug1 from '../assets/augustwilson1.png';
 import rock from '../assets/rock-shelter.jpeg';
 import aug2 from '../assets/augustwilson2.png';
 import monmap from '../assets/mon-map.png';
+import clemente1 from '../assets/veraclemente.jpeg';
+import clemente2 from '../assets/clementes.jpeg';
+import progress1 from '../assets/progress.jpeg';
+import progress2 from '../assets/progress-bar-2.png';
 import React, { useState, useEffect, Component } from 'react';
 import { IonButton } from '@ionic/react';
 import firebaseConfig from '../firebase.config';
@@ -12,7 +16,6 @@ import { getFirestore, collection, getDocs, doc } from 'firebase/firestore';
 import { initializeApp } from '@firebase/app';
 import 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { stringify } from 'querystring';
 
 const Tab2: React.FC = () => {
   const app = initializeApp(firebaseConfig);
@@ -66,10 +69,16 @@ const Tab2: React.FC = () => {
               <React.Fragment key={doc.id}>
                 <IonCard onClick={() => { setShowModal(true); setItem(doc); }}>
                   {doc.coverphoto === 'aug1' &&
-                    <img className="card-img" alt="cover for history card" src={aug1}></img>
+                    <img className="card-img" alt="August Wilson Award Winning Black Playright from Pittsburgh" src={aug1}></img>
+                  }
+                  {doc.coverphoto === 'progress1' &&
+                    <img className="card-img" alt="Progress Bar" src={progress1}></img>
                   }
                   {doc.coverphoto === 'monmap' &&
-                    <img className="card-img" alt="cover for history card" src={monmap}></img>
+                    <img className="card-img" alt="Map of Pittsburgh River" src={monmap}></img>
+                  }
+                  {doc.coverphoto === 'clemente1' &&
+                    <img className="card-img" alt="Vera Clemente" src={clemente1}></img>
                   }
                   <IonCardHeader>
                     <IonCardSubtitle>Local Knowledge</IonCardSubtitle>
@@ -82,10 +91,16 @@ const Tab2: React.FC = () => {
         )}
         <IonModal isOpen={showModal} cssClass='my-custom-class'>
           {currentItem.innerphoto === 'aug2' &&
-            <img className="modal-img" alt="cover for history card" src={aug2}></img>
+            <img className="modal-img" alt="August Wilson Award Winning Black Playright from Pittsburgh" src={aug2}></img>
           }
           {currentItem.innerphoto === 'rock' &&
-            <img className="modal-img" alt="cover for history card" src={rock}></img>
+            <img className="modal-img" alt="Native American archaeological findings in Pittsburgh" src={rock}></img>
+          }
+          {currentItem.innerphoto === 'progress2' &&
+            <img className="modal-img" alt="progress bar which was invented at CMU" src={progress2}></img>
+          }
+          {currentItem.innerphoto === 'clemente2' &&
+            <img className="modal-img" alt="Roberto Clemente in Pirates uniform with Vera his wife and children" src={clemente2}></img>
           }
           <div className="field"> {currentItem.desc} </div>
           <a className="field" href={currentItem.source}> {currentItem.source} </a>
