@@ -104,7 +104,7 @@ const Tab2: React.FC = () => {
           }
           <div className="field"> {currentItem.desc} </div>
           <a className="field" href={currentItem.source}> {currentItem.source} </a>
-          <IonButton onClick={() => setShowModal(false)}>Close Modal</IonButton>
+          <IonButton onClick={() => setShowModal(false)}>Close</IonButton>
         </IonModal>
       </IonContent>
     </IonPage>
